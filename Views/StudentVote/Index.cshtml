@@ -1,0 +1,46 @@
+﻿ @model Position
+  @{
+    ViewData["Title"] = "Vote Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Voting Page</h1>
+    </div>
+
+  
+<p>
+    <a id="president" asp-action="Create"  asp-route-id="1" class=" btn btn-primary btn-sm">President</a>
+
+</p>
+<p>
+    <a id="vicepresident" asp-action="Create" asp-route-id="2" class=" btn btn-primary btn-sm">Vice President</a>
+
+</p><p>
+    <a id="captain" asp-action="Create" asp-route-id="3" class=" btn btn-primary btn-sm">Captain</a>
+
+</p><p>
+    <a id="secretary" asp-action="Create" asp-route-id="4" class=" btn btn-primary btn-sm">Secretary</a>
+
+</p>
+
+
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <script>
+        alert('@TempData["SuccessMessage"]');
+    </script>
+}
+@if (TempData["FailureMessage"] != null)
+{
+    <script>
+        alert('@TempData["FailureMessage"]');
+    </script>
+}
+@if (TempData["InvalidMessage"] != null)
+{
+    <script>
+        alert('@TempData["InvalidMessage"]');
+    </script>
+}
+

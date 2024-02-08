@@ -1,0 +1,18 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Add Student";
+}
+<h3>@ViewData["Title"]</h3>
+<hr />
+<form asp-action="Create">
+    <div class="container">
+        <div class="mb-2">
+            <lable asp-for="StudentName" class="control-lable">Student Name</lable>
+            <input asp-for="StudentName" class="form-control" />
+            <span asp-validation-for="StudentName" class="text-danger"></span>
+        </div>
+        
+            <input type="submit" value="Create" class="btn btn-primary btn-sm" />
+        </div>
+</form>
+    

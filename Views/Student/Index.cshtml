@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Dotnet_M1_A2.Models.Student>
+ @{
+    ViewData["Title"] = "Student Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Student Page</h1>
+    </div>
+
+  
+<p>
+    <a asp-action="Create" id="addStudent" class=" btn btn-primary btn-sm"> Add Student </a>
+
+</p>
+<table class="table table-bordered table-responsive table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.StudentName</td>
+                <td>@student.StudentID</td>
+            </tr>
+        }
+        
+</tbody>
+</table>
